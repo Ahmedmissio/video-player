@@ -1,0 +1,17 @@
+.reel-wrap { position:relative; width:100%; aspect-ratio:16/9; background:#000; overflow:hidden; border-radius:12px; }
+.reel-wrap video { width:100%; height:100%; object-fit:cover; display:block; cursor:pointer; }
+.reel-center-btn { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:76px; height:76px; border-radius:50%; background:rgba(0,0,0,0.55); backdrop-filter:blur(8px); border:none; display:flex; align-items:center; justify-content:center; cursor:pointer; opacity:0; pointer-events:none; transition:opacity .25s ease, transform .2s ease; z-index:2; }
+.reel-wrap.is-paused .reel-center-btn, .reel-wrap:hover .reel-center-btn { opacity:1; pointer-events:auto; }
+.reel-center-btn:hover { transform:translate(-50%,-50%) scale(1.08); background:rgba(0,0,0,0.75); }
+.reel-center-btn svg { width:30px; height:30px; fill:#fff; }
+.reel-controls { position:absolute; left:0; right:0; bottom:0; padding:10px 16px 14px; background:linear-gradient(to top, rgba(0,0,0,0.7), transparent); display:flex; flex-direction:column; gap:8px; opacity:0; transition:opacity .25s ease; z-index:2; }
+.reel-wrap:hover .reel-controls, .reel-wrap.is-paused .reel-controls { opacity:1; }
+.reel-progress { position:relative; height:4px; background:rgba(255,255,255,0.25); border-radius:2px; cursor:pointer; transition:height .15s ease; }
+.reel-progress:hover { height:6px; }
+.reel-progress-fill { position:absolute; left:0; top:0; bottom:0; width:0%; background:#fff; border-radius:2px; }
+.reel-row { display:flex; align-items:center; justify-content:space-between; }
+.reel-left { display:flex; align-items:center; gap:10px; }
+.reel-btn { background:transparent; border:none; padding:4px; cursor:pointer; color:#fff; display:flex; opacity:.9; transition:opacity .15s ease; }
+.reel-btn:hover { opacity:1; }
+.reel-btn svg { width:20px; height:20px; fill:currentColor; }
+.reel-time { color:#fff; font-size:12px; font-family:system-ui,sans-serif; font-variant-numeric:tabular-nums; opacity:.9; }
